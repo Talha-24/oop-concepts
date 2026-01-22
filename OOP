@@ -1,0 +1,277 @@
+# OOP
+Why OOP?
+ Almost, all of the modern programming languages, have the oop feature. So learning OOp will be beneficial for us. If we are shifting to another programming language.
+ Placement Interviews, OOP topics are asked as interview questions. 
+
+ Classes and Objects : 
+  Classes and Objects have been introduced in programming, so that we can solve real world problems through coding/programming.
+  For Example: If we take the Marooti 800 as an example, first of all its blue print has been made by the engineers, then that blue print has been given into the factories, 
+  factory engineers have started manufacturing all of the Marooti 800 cars on the basis of that blue print. Now, all of the cars will be manufactured on the basis of that blue print.
+  Different different cars may be in millions will follow that same blue print. 
+
+  In terms of programming, the cars are objects and the Blue Print is Class. Objects are made from the Classes.
+  So, if we are taking anything from the real world in our programming, we will take it as an object, it might be a person, an animal or any machine.
+  Now, the instructions/Blue print  for creating that object are stored in the class, instructions means, the capabilites of the object(what it can perform), properties of the objects, and limitations.
+
+ Object: As you have noticed, we have some methods and properties in each object, let say I have created a class Pen. Now, it is absolute clear that the class Pen, will only produces,
+ the Pen type objects, it means all of the objects created from the Pen class will have the same properties across.
+
+
+ Contructors: 
+ We constructor, which are used to create the objects as the name indicates. 
+ We have three properties of constructors : 
+
+ Each object can call the constructor only 1 times , constructors are called automatically, when the object is created.
+
+ The name of constructor is similiar to the name of Class.
+ Constructors are normal functions, but the can't return anything.
+
+
+
+//OOP
+The concept of copy constructor has been come from Cpp, Cpp have user defined as well as pre-build copy constructors.
+But in JAVA, all of the copy constructors are user defined constructors.
+
+
+Copy Constructors:
+ Copy Constructors are used to create the objects, on the basis of the values of other objects
+ ```
+
+class Aeroplane {
+    // PIA
+    String name;
+    String type;
+    String hosts;
+    String pilots;
+    String passengers;
+
+    Aeroplane(String name,String type, String hosts, String pilots, String
+    passengers){
+    this.name=name;
+    this.type=type;
+    this.hosts=hosts;
+    this.pilots=pilots;
+    this.passengers=passengers;
+    }
+    
+    Aeroplane() {
+        this.name = "PIA";
+        this.hosts = "4";
+        this.passengers = "104 Members";
+        this.pilots = " Pilots are here";
+        this.type = "Host";
+    }
+
+
+    // Aeroplane(Aeroplane A1){
+    //     this.name=A1.name;
+    //     this.type=A1.type;
+    //     this.passengers=A1.passengers;
+    //     this.pilots=A1.pilots;
+    //     this.hosts=A1.hosts;
+    // }
+    // Aeroplane(){}
+
+    public void printDetails() {
+        System.out.println("Name : " + name);
+        System.out.println("Type : " + this.type);
+        System.out.println("Hosts : " + this.hosts);
+        System.out.println("Pilots : " + this.pilots);
+        System.out.println("Passengers : " + this.passengers);
+    }
+}
+
+class Student{
+    String name;
+    int age;
+    // PARAM CONS
+
+    Student(String name, int age){
+        this.name=name;
+        this.age=age;
+    }
+
+    // COPY CNS
+
+    Student(Student S1){
+        this.name=S1.name;
+        this.age=S1.age;
+    }
+
+    public void StudentDetails(){
+        System.out.println(this.name);
+        System.out.println(this.age);
+    }
+}
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Aeroplane PIA=new Aeroplane("Pakistan International Airlines", "Economy and
+        // Business", "10 Crew Members", "3 Pilots", "104 Passengers");
+        Aeroplane PIA = new Aeroplane();
+      PIA.name="Talha";
+      PIA.type="B";
+      PIA.hosts="5 Hosts";
+      PIA.passengers="10 Passengers";
+      Aeroplane PIA2=new Aeroplane(PIA);
+
+
+      Student s1=new Student("Mohammad Talha", 23);
+      Student s2=new Student("Ahmed",20);
+      Student s3=new Student("Abdul Majeed",20);
+      Student s4=new Student("Iqra Madni",30);
+      Student s5=new Student("Iqra Madni",30);
+      Student s6=new Student(s4);
+      s6.StudentDetails();
+      System.out.println("Studnet 4");
+      s4.StudentDetails();
+
+    }
+}
+ ```
+
+
+ PolyMprphism:
+ 
+        // POLYMORPHISM : Doing same task in different ways is called Polymorphism.
+        /*
+         * Function Overloading: (Compile);
+         * We create the different different functions, that are performing different
+         * operations,
+         * but with the same name.
+         * Function overloading runs at compiling time,which is the core feature of
+         * compile time polymorphism,
+         * in which we came to know about the error at compilation time.
+         * Function OverWriting: (Run Time Polymorphism)
+         * 
+         * RUlES
+         * 1- The Function arguments must be different or the return types
+         */
+
+
+         ```
+         
+class Student {
+    String name;
+    int age;
+
+    public void PrintInfo(String name){
+        System.out.println("name "+name);
+    }
+
+    public void PrintInfo(int age){
+        System.out.println("Age " +age);
+    }
+    public void PrintInfo(String name, int age){
+        System.out.println(name);
+        System.out.println(age);
+    }
+
+
+    public void PrintInfo(int age, String name){
+        System.out.println(age);
+        System.out.println(name);
+    }
+
+
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Student s1 = new Student();
+
+
+        s1.PrintInfo(30);
+        s1.PrintInfo("Mohammad Talha");
+        s1.PrintInfo("Hello",13);
+        s1.PrintInfo(31,"Acha");
+
+    }
+}
+
+         ```
+
+
+# Inheritance
+
+The passing of properties and methods from parent class to child class is called Inheritance.
+Note: I can't pass/use the constructor function of parent class in child class. it is just calleable within the class in which it is defined.
+## Types of Inheritance:
+1- Single Level Inheritance
+2- Hybrid Inheritance
+3- Multi Level Inheritance
+4- Sibling Inheritance.
+
+
+
+# Packages and Access Modifiers : 
+
+Packages are the collection of related things, like we have a cartoon which has the things.
+Let say I have made a packages of pens, a package of pencils, a package of notebooks,(meaing each of them is like a box having the collection of related things, pencil packages have the pencils of differnet kinds, pens packages has the colllection of different pens, notebook packages has the collection of different different notebooks.)
+# CODE
+ In the same way , logically for our code has thousands of lines, which are separated. If we don't bundle them properly it will be difficult for other person to understand the specific code for a functionality , because code is not aggeragated at one place, it is divided in chunks and also kept separated.
+
+ So it is necessary to write the clean code.
+ For example, I have a SMS, IN JAVA, I will store the code of Student Portal in a separatek package, of parent Portal in a separate packages of teachers portal in a separate Packages. So that when a new developer comes, he knows where the code is present, if he is looking for
+ student portal code, he gets that , understood and started working. So making packages in JAVA is necessary.
+
+ ## Packages are the collection of code which performs a specific functionality. Like scanner class (we use to take input from user)
+ ## accESS mODIFIERS : 
+  the special keywords we use with function , variables names, 
+  1- Default : Default access modifiers are those which are only accessible within their class
+  2- public : Can be accessible in its own file as well as in other files ( packages)
+  3- protected : Can be accessible in its own file(packages) but in other files, only the subclasses can access.
+  3- private : only accessible in its own class.constructor, and class method. can't accessible outside the class
+
+
+  EnCAPSULATION: 
+  EnCapSulation is the combining all of the data(propertes of our object in related class) and methods(functions we define within class), like properties and methods we have in our class. In simple words,
+  creating classes and then creating objects through these classes is called Encapsulation.
+  ## DATA HIDING
+  Through Encapsulation, the concept of data hiding became possible, now how we hide data through encapsulation,
+  let say I don't want to show some data of user outside the class, there I will use the protected /public/private depending upon the need. 
+  we hide data using access modifiers.
+
+  ## ABSTRACTION : 
+  Abstraction is the proccess of only showing the important data to user  and keep hiding the non important data.
+  Wherease Data hiding is the process of protecting data from untended changes from user. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

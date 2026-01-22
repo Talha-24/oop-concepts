@@ -1,0 +1,117 @@
+  //System.out.println("You code");
+       /*
+    System is a class, and println is a method, present in that System class we locate the method in the class System. and give hims the parameter, whatever hte parameter we give, it prints it on the screen.
+  
+    System.out.println("Give next line, after printing");
+    System.out.print("No new line, just prints the text");
+    
+    */
+
+
+
+Variables :
+
+         In Js if we declare a variable, it is undefined automatically.
+         In cpp, if we declare a variable, it has some garbage value, by default
+         But in JAVA, if we just declare some variable and don't intialize it, it is null or 0,
+
+Data Types:
+- Primitive
+- Non-Primitive
+
+Primitive : 
+ Data Type      Range          Size                 No-of-Bits 
+
+ byte         [-128 to 127]     1Byte                8bits
+ short    [-32,768 to 32,767]   2 Bytes               
+ int     [-2,147,483,648,
+         2,147,483,647]         4 Bytes
+ long     [-9,223,372,036,
+          854,775,808
+        to
+        9,223,372,036,854,775,807]                      8 Bytes 
+ float                          4 Bytes 
+ double                         8 Bytes 
+ char                           2 Bytes 
+ boolean                        true/false
+
+// 
+Primitive data types have fixed size, if we try to exceed their size, they return us the error.
+Non-Primitive data types don't have fixed size, they are dynamic, we can put whatever we want to put it
+
+
+/*String Methods : 
+Length, charAt, replace, subString(works like slice) */
+/*   
+        String in JAVA can be created by two means,
+        1- String name="Mohammad Talha";
+        2- String name= new String("Mohammad Talha");
+        For JAVA, both of the above methods are same,  compiler can eaily understand and executes the code,either we use first or second method. */
+
+  String[] names=new String[3];
+        byte[] ages=new byte[3];
+        boolean[] isAdults=new boolean[3];
+        long[] phoneNumbers=new long[3];
+          names[0]="ABdul Raouf";
+        names[1]="Abdul Talha";
+        names[2]="Abdul Shahzaib";
+        ages[0]=25;
+        ages[1]=27;
+        ages[2]=30;
+        isAdults[0]=true;
+        isAdults[1]=true;
+        isAdults[2]=true;
+        phoneNumbers[0]= 03412607741L;
+
+/*Post increment operator, num++
+post increment operator means, add the number on the next line
+System.out.println(pre++);
+Pre Increment Operator ++num;
+pre increment operator means, add the number on current line
+int pre=0;
+System.out.println(++pre);j
+        */
+
+
+Math Functions : 
+
+1- Math.random(), Math.max()
+
+
+
+   public static void main(String[] args) {
+      
+    Scanner userInput=new Scanner(System.in);
+    int userMoney=userInput.nextInt();
+    
+    
+    if(userMoney ==10) System.out.println("Can purchase Pen Only");
+    else if(userMoney ==40) System.out.println("Can purchase Book Only");
+    else if(userMoney >=50) System.out.println("Can Purchase Both Book and Notebook");
+    else{
+        System.out.println("Get more Money!");
+    }
+
+
+       int num=0;
+        do{
+            System.out.println("Enter a number");
+            Scanner userInput=new Scanner(System.in);
+            num=userInput.nextInt();
+            System.out.println("Your number " + num);
+            
+        }
+        while(num>0);
+        
+        System.out.println("Congratulations You Won! " + num)
+
+
+
+           int[] marks=new int[3];
+     
+     try{
+         marks[4]=234;
+     }catch(Exception exception){
+         System.out.println(exception);
+     }
+      System.out.println("Allah Meri Help kr plz");
