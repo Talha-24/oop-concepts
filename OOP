@@ -232,6 +232,7 @@ Let say I have made a packages of pens, a package of pencils, a package of noteb
   EnCAPSULATION: 
   EnCapSulation is the combining all of the data(propertes of our object in related class) and methods(functions we define within class), like properties and methods we have in our class. In simple words,
   creating classes and then creating objects through these classes is called Encapsulation.
+  
   ## DATA HIDING
   Through Encapsulation, the concept of data hiding became possible, now how we hide data through encapsulation,
   let say I don't want to show some data of user outside the class, there I will use the protected /public/private depending upon the need. 
